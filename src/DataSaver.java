@@ -3,6 +3,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 import static java.nio.file.StandardOpenOption.CREATE;
 /**
@@ -20,22 +21,21 @@ public class DataSaver
      */
     public static void main(String[] args)
     {
-        // Test data the lines of the file we will write
+        Scanner in = new Scanner(System.in);
         ArrayList <String>recs = new ArrayList<>();
-        recs.add("Sample data for our file writing example.");
-        recs.add("Sample data Line 2.");
-        recs.add("Sample data Line 3.");
-        recs.add("Sample data Line 4.");
-        recs.add("Sample data Line 5.");
+
+        boolean cont = true;
+
+        while (cont){
+            String firstName = SafeInput.getNonZeroLenString(in, "Enter your first name here: ");
+            String lastName = SafeInput.getNonZeroLenString(in, "Enter your last name here: ");
+            int idNumber = SafeInput.getRangedInt(in, "Enter your ID number here: ", 0, 999999);
+            int birthYear = SafeInput.getRangedInt(in, "Enter the year you were born here: ", 1900, 2100);
 
 
-        // uses a fixed known path:
-        //  Path file = Paths.get("c:\\My Documents\\data.txt");
 
-        // use the toolkit to get the current working directory of the IDE
-        // will create the file within the Netbeans project src folder
-        // (may need to adjust for other IDE)
-        // Not sure if the toolkit is thread safe...
+        }
+
         File workingDirectory = new File(System.getProperty("user.dir"));
         Path file = Paths.get(workingDirectory.getPath() + "\\src\\data.txt");
 
