@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b2dd72ab-0a25-42f1-aa26-3fda43fa5f57" name="Changes" comment="NIO write sample added">
-      <change afterPath="$PROJECT_DIR$/src/SafeInput.java" afterDir="false" />
+    <list default="true" id="b2dd72ab-0a25-42f1-aa26-3fda43fa5f57" name="Changes" comment="all prompts sans email added">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DataSaver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataSaver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SafeInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SafeInput.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,16 +33,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.FileInspector.executor&quot;: &quot;Run&quot;,
-    &quot;Application.NIOReadTextFile.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/School/Downloads/NIO_Path_File_Complete-1&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.DataSaver.executor": "Run",
+    "Application.FileInspector.executor": "Run",
+    "Application.NIOReadTextFile.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/School/Downloads/NIO_Path_File_Complete-1"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="FileInspector" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="FileInspector" />
@@ -114,7 +115,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733188541970</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="all prompts sans email added">
+      <option name="closed" value="true" />
+      <created>1733189611559</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1733189611559</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -124,7 +133,8 @@
     <MESSAGE value="Part 1 working" />
     <MESSAGE value="DataSaver added" />
     <MESSAGE value="NIO write sample added" />
-    <option name="LAST_COMMIT_MESSAGE" value="NIO write sample added" />
+    <MESSAGE value="all prompts sans email added" />
+    <option name="LAST_COMMIT_MESSAGE" value="all prompts sans email added" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

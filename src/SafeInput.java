@@ -100,5 +100,20 @@ public class SafeInput {
         }while(!proceed);
         return retBool;
     }
+    public static String getRegExString(Scanner pipe, String prompt, String regExPattern) {
+        String value = "";
+        boolean gotAValue = false;
+        do {
+            System.out.print("\n" +prompt + ": ");
+            value = pipe.nextLine();
+            if (value.matches(regExPattern)) {
+
+                gotAValue = true;
+            } else {
+                System.out.println("\nInvalid input: " + value);
+            }
+        } while (!gotAValue);
+        return value;
+    }
 }
 

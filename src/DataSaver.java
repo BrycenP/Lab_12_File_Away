@@ -27,38 +27,36 @@ public class DataSaver
         boolean cont = true;
 
         while (cont){
-            String firstName = SafeInput.getNonZeroLenString(in, "Enter your first name here: ");
-            String lastName = SafeInput.getNonZeroLenString(in, "Enter your last name here: ");
-            int idNumber = SafeInput.getRangedInt(in, "Enter your ID number here: ", 0, 999999);
-            int birthYear = SafeInput.getRangedInt(in, "Enter the year you were born here: ", 1900, 2100);
+            String firstName = SafeInput.getNonZeroLenString(in, "Enter your first name here");
+            String lastName = SafeInput.getNonZeroLenString(in, "Enter your last name here");
+            String email = SafeInput.getRegExString(in, "Enter your email here", "^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}$");
+            int idNumber = SafeInput.getRangedInt(in, "Enter your ID number here", 0, 999999);
+            int birthYear = SafeInput.getRangedInt(in, "Enter the year you were born here", 1900, 2100);
+            in.nextLine();
 
+            String record = firstName + ", " + lastName + ", " + idNumber + ", " + email + ", " + birthYear;
+            recs.add(record);
 
+            cont = SafeInput.getYNConfirm(in, "Do you want to add another record?");
 
         }
+        String fileName = SafeInput.getNonZeroLenString(in, "Enter the filename to save the data (including .csv extension)");
 
         File workingDirectory = new File(System.getProperty("user.dir"));
         Path file = Paths.get(workingDirectory.getPath() + "\\src\\data.txt");
 
         try
         {
-            // Typical java pattern of inherited classes
-            // we wrap a BufferedWriter around a lower level BufferedOutputStream
             OutputStream out =
                     new BufferedOutputStream(Files.newOutputStream(file, CREATE));
             BufferedWriter writer =
                     new BufferedWriter(new OutputStreamWriter(out));
-
-            // Finally can write the file LOL!
-
             for(String rec : recs)
             {
-                writer.write(rec, 0, rec.length());  // stupid syntax for write rec
-                // 0 is where to start (1st char) the write
-                // rec. length() is how many chars to write (all)
-                writer.newLine();  // adds the new line
-
+                writer.write(rec, 0, rec.length());
+                writer.newLine();
             }
-            writer.close(); // must close the file to seal it and flush buffer
+            writer.close();
             System.out.println("Data file written!");
         }
         catch (IOException e)
