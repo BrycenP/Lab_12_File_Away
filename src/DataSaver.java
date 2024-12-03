@@ -37,10 +37,9 @@ public class DataSaver
             String record = firstName + ", " + lastName + ", " + idNumber + ", " + email + ", " + birthYear;
             recs.add(record);
 
-            cont = SafeInput.getYNConfirm(in, "Do you want to add another record?");
+            cont = SafeInput.getYNConfirm(in, "Do you want to add another record? (y or n)");
 
         }
-        String fileName = SafeInput.getNonZeroLenString(in, "Enter the filename to save the data (including .csv extension)");
 
         File workingDirectory = new File(System.getProperty("user.dir"));
         Path file = Paths.get(workingDirectory.getPath() + "\\src\\data.txt");
